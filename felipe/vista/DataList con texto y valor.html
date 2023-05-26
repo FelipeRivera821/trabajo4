@@ -1,0 +1,20 @@
+<!--Ya hemos visto el uso básico de un DataList ahora vamos a ver cómo podemos hacer algo más avanzado. En este caso vamos a vr cómo podemos crear una lista de elementos dónde haya dos partes, por un lado el texto que inserta o elige el usuario y por otro el valor que tiene dicho elemento.
+
+Para poder hacer esto, dentro de los elementos option deberemos de utilizar los atrobutos value para poder dar el valor y label para darle la etiqueta de texto que se mostrará.-->
+
+<datalist id="miLista">
+    <option label="Texto 1" value="Valor 1"></option>
+    <option label="Texto 2" value="Valor 2"></option>
+    <option label="Texto 3" value="Valor 3"></option>
+    ...
+    <option label="Texto N" value="Valor N"></option>      
+  </datalist>
+
+  <!--Podemos utilizar los campos de texto y valor de un DataList de la siguiente forma:-->
+  <datalist id="listaurls">
+    <option value="http://lineadecodigo.com" label="Línea de Código">
+    <option value="http://www.manualweb.net" label="Manual Web">
+    <option value="http://www.dudasprogramacion.com" label="Dudas de Programación">
+    <option value="http://www.w3api.com" label="W3Api">
+   </datalist>
+   <input type="url" id="misurl" list="listaurls" />

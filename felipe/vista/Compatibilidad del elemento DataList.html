@@ -1,0 +1,31 @@
+<!--El elemento datalist es relativamente nuevo y puede darse el caso de que nos encontremos con un navegador -sobre todo los antiguos- que no soporte dicho elemento. En este caso podemos apoyarnos en el elemento select que ya da de por sí una lista de opciones.
+
+Así podemos combinar el uso de los elemento datalist y select de la siguiente forma:-->
+
+<datalist id="miLista">
+    <label for="elemento">Selecciona un elemento de la lista:</label>
+    <select id="elementos" name="elementos">
+      <option>Opción 1</option>
+      <option>Opción 2</option>
+      <option>Opción 3</option>
+      <option>Opción 4</option>
+      ...
+      <option>Opción N</option>   
+    </select>     
+  </datalist>
+
+  <!--Los navegadores que den soporte al elemento datalist directamente ignorarán el elemento select y no lo pintarán.
+
+Siguiendo esta estructura podríamos tener el siguiente código de compatibilidad:-->
+
+<label for="misurl">Dinos tu URL:</label>
+<input type="url" id="misurl" list="listaurls" />
+<datalist id="listaurls">
+  <label for="elemento">O eligela de la siguiente lista:</label>
+  <select id="elementos" name="elementos">
+    <option value="http://lineadecodigo.com" label="Línea de Código">
+     <option value="http://www.manualweb.net" label="Manual Web">
+     <option value="http://www.dudasprogramacion.com" label="Dudas de Programación">
+     <option value="http://www.w3api.com" label="W3Api">
+   </select>
+</datalist>

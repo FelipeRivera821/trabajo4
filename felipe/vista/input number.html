@@ -1,0 +1,20 @@
+<!--Los elementos input de tipo number nos van a valer para poder introducir números. Para crear un elemento input de tipo number simplemente tendremos que crear la siguiente estructura:-->
+<input type="number" id="numero" name="numero">
+
+<!--A este tipo de elementos le podemos especificar un par de atributos más. Por un lado podemos fijar cual es el número mínimo y máximo que se puede insertar. Esto lo haremos mediante los atributos min y max-->
+
+<input type="number" id="numero" name="numero" min="valor_minimo" max="valor_maximo">
+
+<!--Por otro podemos indicar el valor de incremento o decremento de los números. Es decir, si queremos que solo se incremente de dos en dos, o de tres en tres,… Esto lo conseguimos mediante el atributo step.-->
+
+<input type="number" id="numero" name="numero" step="incremento">
+
+<!--Vemos que el valor mínimo es 2000 y el máximo 2018 y que solo podemos incrementar o decrementar de 2 en 2, ya que preguntamos por años pares.
+
+Los campos input de tipo number nos forzarán a que el valor introducido sea un número y además que esté dentro del rango marcado por los atributos min y max.-->
+
+<form action="#" method="get">
+	<label for="anio">¿Cuál es tu año par favorito del siglo XXI?</label>
+	<input type="number" id="anio" name="anio" min="2000" max="2018" step="2"/>
+	<input type="submit" value="Buscar"/>
+</form>

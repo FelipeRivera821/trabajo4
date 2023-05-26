@@ -1,0 +1,40 @@
+<!--Otra forma de elegir un valor numerico es mediante un slider. Para poder poner estas barras de seleccion tenemos el tipos range dentro de los elementos input.-->
+
+<input type="range" id="numero" name="numero">
+
+<!--Los elementos input de tipo range aceptan los mismos parámetros que los elementos number. Así que podremos añadir los atributos min, max y step.-->
+
+<input type="range" id="numero" name="numero" min="valor_minimo" max="valor_maximo" step="incremento">
+
+<!--De esta manera el mismo ejemplo anterior relativo a los años, pero con un slider quedaría de la siguiente forma:-->
+<form action="#" method="get">
+	<label for="anio">¿Cuál es tu año par favorito del siglo XXI?</label><br/>
+	<input type="range" id="anio" name="anio" min="2000" max="2018" step="2"/>
+	<input type="submit" value="Enviar"/>
+</form>
+
+<!--Como se puede ver es identico.
+
+Uno de los problemas que nos econtramos con los sliders es que no tienen una representación visual del valor que estamos marcando. Es por ello que deberemos de utilizar algún código en Javascript para poder mostrarlo.
+
+Así el mismo ejemplo, pero visualizand el año quedaría de la siguiente forma:-->
+
+<form action="#" method="get">
+	<label for="anio">¿Cuál es tu año par favorito del siglo XXI?</label><br/>
+	<input type="range" id="anio" name="anio" min="2000" max="2018" step="2"/>
+	<span id="salida"></span><br/>
+	<input type="submit" value="Enviar"/>
+</form>
+
+<!--Y tendríamos que añadir el siguiente código Javascript:-->
+<!--
+var anio = document.getElementById("anio");
+var salida = document.getElementById("salida");
+
+salida.textContent = anio.value;
+
+anio.oninput = function() {
+  salida.textContent = anio.value;
+}
+-->
+<!--Este código Javascript simplemente vuelca el valor del elemento input sobre un elemento span.-->
